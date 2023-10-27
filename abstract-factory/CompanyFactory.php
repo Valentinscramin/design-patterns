@@ -14,11 +14,11 @@ class CompanyFactory extends AbstractFactory
 
     public function setName(string $name)
     {
-        $this->obj->setData($name);;
+        $this->obj->setData($name);
     }
 
     public function getName()
     {
-        echo $this->obj->getData()."\n";
+        echo "\n".$this->obj->getData();
     }
 }
