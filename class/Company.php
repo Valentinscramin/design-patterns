@@ -1,10 +1,10 @@
 <?php
 
-include '../interface/Block.interface.php';
+require_once ROOT_PATH . '/interface/Block.php';
 
-class Person implements Block
+class Company implements Block
 {
-    public $class = "person";
+    public $class = 'company';
     protected $name;
 
     public function __construct(string $name)
@@ -19,6 +19,6 @@ class Person implements Block
 
     public function getData(): string
     {
-        return $this->class.": ".$this->name;
+        return $this->class . ': ' . $this->name;
     }
 }

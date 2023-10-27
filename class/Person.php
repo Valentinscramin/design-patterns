@@ -1,10 +1,10 @@
 <?php
 
-include '../interface/Block.interface.php';
+require_once ROOT_PATH . '/interface/Block.php';
 
-class Company implements Block
+class Person implements Block
 {
-    public $class = "company";
+    public $class = "person";
     protected $name;
 
     public function __construct(string $name)

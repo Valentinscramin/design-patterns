@@ -10,8 +10,11 @@
         <testsuite name="everything">
             <directory suffix=".php">src\</directory>
         </testsuite>
-        <testsuite name="fibo">
-            <directory>src\Test.php</directory>
+        <testsuite name="company">
+            <directory>src\TestCompany.php</directory>
+        </testsuite>
+        <testsuite name="person">
+            <directory>src\TestPerson.php</directory>
         </testsuite>
     </testsuites>
     <logging>

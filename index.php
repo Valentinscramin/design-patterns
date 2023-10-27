@@ -1,12 +1,14 @@
 <?php
 
-include "abstract-factory/CompanyFactory.factory.php";
-// include "abstract-factory/PersonFactory.factory.php";
+define('ROOT_PATH', dirname(__FILE__));
 
-$factory = new CompanyFactory();
-$factory->setName("coffe-with-milk");
+include ROOT_PATH . "/abstract-factory/CompanyFactory.php";
+include ROOT_PATH . "/abstract-factory/PersonFactory.php";
 
-// $factory = new PersonFactory();
-// $factory->setName("valentin");
+$factory = new CompanyFactory("coffe-with-milk");
+$factory->getName();
+
+$factory = new PersonFactory("valentin");
+$factory->getName();
 
 
