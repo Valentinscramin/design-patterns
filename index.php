@@ -10,8 +10,12 @@ require_once ROOT_PATH . "/class/OutSourcing.php";
 // FACTORYS
 $factory = new CompanyFactory("coffe-with-milk");
 $factory->getName();
+$factory->setName("oi");
+$factory->getName();
 
 $factory = new PersonFactory("valentin");
+$factory->getName();
+$factory->setName("oi");
 $factory->getName();
 // END FACTORYS
 
