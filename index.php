@@ -2,13 +2,12 @@
 
 define('ROOT_PATH', dirname(__FILE__));
 
-include ROOT_PATH . "/abstract-factory/CompanyFactory.php";
-include ROOT_PATH . "/abstract-factory/PersonFactory.php";
+include ROOT_PATH . '/builder/BrandsBuilder.php';
+include ROOT_PATH . '/class/Brands.php';
 
-$factory = new CompanyFactory("coffe-with-milk");
-$factory->getName();
+$brands = new Brands();
+$brandsBuilder = new BrandsBuilder();
 
-$factory = new PersonFactory("valentin");
-$factory->getName();
-
-
+$brands->setBrands($brandsBuilder);
+$brands->buildAll();
+$brandsBuilder->getPackBrandModels()->listModels();
